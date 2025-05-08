@@ -1,0 +1,42 @@
+Loading MNIST dataset...
+Train samples: 60000, Test samples: 10000
+Building data augmentation pipeline...
+Building CNN model...
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+conv2d (Conv2D)              (None, 26, 26, 32)        320
+batch_normalization (BatchNormalization) (None, 26, 26, 32) 128
+conv2d_1 (Conv2D)            (None, 24, 24, 32)        9248
+batch_normalization_1 (BatchNormalization) (None, 24, 24, 32) 128
+max_pooling2d (MaxPooling2D) (None, 12, 12, 32)        0
+dropout (Dropout)            (None, 12, 12, 32)        0
+conv2d_2 (Conv2D)            (None, 10, 10, 64)        18496
+batch_normalization_2 (BatchNormalization) (None, 10, 10, 64) 256
+conv2d_3 (Conv2D)            (None, 8, 8, 64)         36928
+batch_normalization_3 (BatchNormalization) (None, 8, 8, 64)  256
+max_pooling2d_1 (MaxPooling2D) (None, 4, 4, 64)        0
+dropout_1 (Dropout)          (None, 4, 4, 64)         0
+flatten (Flatten)            (None, 1024)             0
+dense (Dense)                (None, 512)              524800
+batch_normalization_4 (BatchNormalization) (None, 512) 2048
+dropout_2 (Dropout)          (None, 512)              0
+dense_1 (Dense)              (None, 10)               5130
+=================================================================
+Total params: ~600,000
+Trainable params: ~598,000
+Non-trainable params: ~1,000
+_________________________________________________________________
+
+Starting model training...
+Epoch 1/50
+...
+Epoch XX/50
+Restoring model weights from the end of the best epoch.
+Epoch XX: early stopping
+
+Loading best model...
+
+Final Test Accuracy: 0.99XX
+Final Test Loss: 0.0XXX
